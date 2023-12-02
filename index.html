@@ -29,12 +29,18 @@
       >
         <button>Get the App</button>
 
-        <ul class="flex gap-8">
-          <li>Investor Relations</li>
-          <li>Add restaurant</li>
-          <li>Log in</li>
-          <li>Sign up</li>
+        <ul class="hidden md:flex gap-8">
+          <li class="cursor-pointer">Investor Relations</li>
+          <li class="cursor-pointer">Add restaurant</li>
+          <li class="cursor-pointer">Log in</li>
+          <li class="cursor-pointer">Sign up</li>
         </ul>
+
+          <div class="md:hidden flex flex-col gap-1">
+              <div class="h-0.5 w-5 bg-white rounded-full"></div>
+              <div class="h-0.5 w-5 bg-white rounded-full"></div>
+              <div class="h-0.5 w-5 bg-white rounded-full"></div>
+          </div>
       </nav>
       <div class="flex flex-col justify-center items-center mt-28">
         <div class="flex w-80">
@@ -46,12 +52,12 @@
         </div>
 
         <div>
-          <h1 class="text-white text-4xl my-8 font-normal">
+          <h1 class="text-white p-4 text-xl md:text-4xl my-8 font-normal">
             Discover the best food & drinks in Delhi NCR
           </h1>
         </div>
 
-        <div class="flex relative mb-16 w-[800px]">
+        <div class="flex relative mb-16 md:w-[800px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -69,21 +75,22 @@
           <input
             type="text"
             placeholder="Search for restaurant, cuisine or dish"
-            class="focus:outline-0 py-3 pl-12 pr-20 rounded-2xl w-full"
+            class="focus:outline-0 py-3 pl-10 md:pl-12 md:pr-20 rounded-2xl w-full"
           />
         </div>
       </div>
     </header>
 
-    <section class="recipes-cards flex gap-4 max-w-[1100px] mx-auto my-10">
+    <section class="recipes-cards flex-col sm:flex-row flex gap-4 max-w-[1100px] mx-auto my-10 px-10 sm:px-2 md:px-0">
       <div
         class="cards rounded-2xl overflow-hidden relative border-2 hover:scale-105 transition-transform"
       >
         <img
           src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
           alt="card-1"
+          class="w-full"
         />
-        <div class="absolute bottom-0 bg-white w-full p-5">
+        <div class="absolute bottom-0 bg-white w-full p-2 md:p-5">
           <h2 class="text-[#363636] text-lg">Order Online</h2>
           <p class="text-[#4F4F4F]">Stay home and order to your doorstep</p>
         </div>
@@ -94,8 +101,9 @@
         <img
           src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
           alt="card-2"
+          class="w-full"
         />
-        <div class="absolute bottom-0 bg-white w-full p-5">
+        <div class="absolute bottom-0 bg-white w-full p-2 md:p-5">
           <h2 class="text-[#363636] text-lg">Dinning</h2>
           <p class="text-[#4F4F4F]">View the city's favourite dining venus</p>
         </div>
@@ -106,15 +114,16 @@
         <img
           src="https://b.zmtcdn.com/webFrontend/d9d80ef91cb552e3fdfadb3d4f4379761647365057.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
           alt="card-3"
+          class="w-full"
         />
-        <div class="absolute bottom-0 bg-white w-full p-5">
+        <div class="absolute bottom-0 bg-white w-full p-2 md:p-5">
           <h2 class="text-[#363636] text-lg">Nightlife and Clubs</h2>
           <p class="text-[#4F4F4F]">Explore the city's top nightlife outlets</p>
         </div>
       </div>
     </section>
 
-    <section class="max-w-[1100px] mx-auto my-8">
+    <section class="max-w-[1100px] mx-auto my-8 px-10 sm:px-2 md:px-0">
       <div class="flex flex-col gap-2">
         <h2 class="text-4xl font-semibold">Collections</h2>
         <div class="flex justify-between">
@@ -122,7 +131,7 @@
             Explore curated lists of top restaurants, cafés, pubs, and bars in
             Delhi NCR, based on trends.
           </p>
-          <p class="flex text-red-500 cursor-pointer">
+          <p class="text-red-500 cursor-pointer hidden md:flex">
             All collections in Delhi NCR
             <span
               ><svg
@@ -143,12 +152,12 @@
           </p>
         </div>
       </div>
-      <div class="cards-container flex gap-4 my-4">
+      <div class="cards-container flex-col sm:flex-row flex gap-4 my-4">
         <div class="cards rounded-2xl overflow-hidden relative">
           <img
             src="https://images.pexels.com/photos/1322184/pexels-photo-1322184.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="img-1"
-            class="h-60 backdrop-blur-sm grayscale-[60%]"
+            class="h-60 backdrop-blur-sm grayscale-[60%] w-full"
           />
           <div class="absolute bottom-0 py-2 px-4 text-white">
             <h3 class="font-semibold">Newly Opened Restaurants</h3>
@@ -175,7 +184,7 @@
           <img
             src="https://images.pexels.com/photos/1449775/pexels-photo-1449775.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="img-2"
-            class="h-60 backdrop-blur-sm grayscale-[60%]"
+            class="h-60 backdrop-blur-sm grayscale-[60%] w-full"
           />
           <div class="absolute bottom-0 py-2 px-4 text-white">
             <h3 class="font-semibold">Unique Dining Experiences</h3>
@@ -202,7 +211,7 @@
           <img
             src="https://images.pexels.com/photos/776538/pexels-photo-776538.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="img-3"
-            class="h-60 backdrop-blur-sm grayscale-[60%]"
+            class="h-60 backdrop-blur-sm grayscale-[60%] w-full"
           />
           <div class="absolute bottom-0 py-2 px-4 text-white">
             <h3 class="font-semibold">Best Insta-worthy Places</h3>
@@ -228,12 +237,12 @@
       </div>
     </section>
 
-    <section class="max-w-[1100px] mx-auto my-16">
+    <section class="max-w-[1100px] mx-auto my-16 px-10 sm:px-2 md:px-0">
       <h2 class="text-4xl">
         Popular localities in and around
         <span class="font-semibold">Delhi NCR</span>
       </h2>
-      <div class="card-container grid grid-cols-3 grid-rows-3 gap-4 my-4">
+      <div class="card-container grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
         <div
           class="flex justify-between p-4 border-2 rounded-2xl cursor-pointer hover:shadow-lg transition-shadow"
         >
@@ -449,15 +458,15 @@
     </section>
 
     <section class="bg-[#FFFBF7] p-16 my-16">
-      <div class="max-w-[1100px] mx-auto flex justify-center items-center">
-        <div class="w-1/3 flex justify-end">
+      <div class="max-w-[1100px] mx-auto flex-col md:flex-row flex justify-center items-center">
+        <div class="md:w-1/3 flex justify-end">
           <img
             src="https://b.zmtcdn.com/data/o2_assets/f773629053b24263e69f601925790f301680693809.png"
             alt="img-5"
             class="w-60"
           />
         </div>
-        <div class="w-2/4">
+        <div class="md:w-2/4 flex flex-col items-center md:items-start">
           <h3 class="text-4xl font-semibold my-1">Get the Zomato app</h3>
           <p class="font-light text-lg">
             We will send you a link, open it on your phone to download the app
@@ -473,7 +482,7 @@
             </div>
           </div>
 
-          <div class="flex gap-4">
+          <div class="flex gap-4 flex-col xl:flex-row">
             <div>
               <input
                 type="text"
@@ -489,7 +498,7 @@
           </div>
 
           <div class="my-6">
-            <h3 class="my-2 text-gray-400 font-light">Download app from</h3>
+            <h3 class="my-2 text-gray-400 font-light text-center md:text-start">Download app from</h3>
             <div class="flex gap-4">
               <img
                 src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"
@@ -507,7 +516,7 @@
       </div>
     </section>
 
-    <section class="max-w-[1100px] mx-auto flex flex-col gap-4">
+    <section class="max-w-[1100px] mx-auto flex flex-col gap-4 px-10 sm:px-2 md:px-0">
       <h3 class="text-4xl font-normal">Explore options near me</h3>
       <div class="flex flex-col gap-4 my-4">
         <div class="flex justify-between p-4 border-2 rounded cursor-pointer">
@@ -582,13 +591,13 @@
     </section>
 
     <footer class="bg-gray-100 pt-16 mt-8">
-      <div class="max-w-[1100px] mx-auto">
-        <div class="flex justify-between">
+      <div class="max-w-[1100px] mx-auto px-10 sm:px-2 md:px-0">
+        <div class="flex flex-wrap justify-between">
           <img
             src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*"
             alt="logo"
           />
-          <div class="flex gap-4">
+          <div class="hidden md:flex gap-4">
             <div>
               <select class="p-2">
                 <option value="India">India</option>
@@ -602,7 +611,7 @@
           </div>
         </div>
 
-        <div class="flex justify-between mt-4">
+        <div class="flex flex-wrap justify-between mt-4">
           <div class="flex flex-col gap-2">
             <h4 class="tracking-wider">ABOUT ZOMATO</h4>
             <ul class="text-[#696969] font-light">
